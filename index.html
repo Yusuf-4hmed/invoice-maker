@@ -9,7 +9,7 @@
 <body>
     <div class="top-invoice">
         <div class="name-address">
-        <input class="title-full-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
+        <input id="title-full-name-input" class="title-full-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
         <input class="address-input" type="text" placeholder="e.g 64 Zoo Lane"></input>
         <input class="postcode-input" type="text" placeholder="e.g E14 1LH"></input>
     </div>
@@ -27,19 +27,19 @@
         <tr>
             <td><input class="date-input" type="date"></td>
             <td><input class="desc-input" type="text"></td>
-            <td><input class="price-input" type="text"></td>
+            <td><input class="price-input" type="number"></td>
         </tr>
     </table>
     <button onclick="addNewTableRow()">New Table Row</button>
     <div class="please-pay">
-        <p class="please-pay-amount">Please pay _____ into the follwing bank account:</p>
+        <p id="please-pay-amount" class="please-pay-amount">Please pay _____ into the follwing bank account:</p>
         <div class="bank-details">
             <input class="account-holder-name" type="text">
             <input class="bank-name" type="text">
             <input class="account-number" type="text">
             <input class="sort-code" type="text">
         </div>
-        <p class="many-thanks">Many thanks, _____</p>
+        <p class="many-thanks" id="many-thanks">Many thanks, _____</p>
     </div>
 </body>
  <script src="main.js"></script>
