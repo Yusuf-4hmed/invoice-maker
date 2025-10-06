@@ -1,0 +1,39 @@
+.top-invoice {
+    display: flex;
+    gap: auto;
+}
+
+.name-address {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.name-address input {
+    width: 200px;
+}
+
+.invoice-number {
+
+}
+
+.number-input {
+    width: 60px;
+}
+
+.invoice-table {
+    margin: 10px;
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid grey;
+}
+
+.bank-details {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+

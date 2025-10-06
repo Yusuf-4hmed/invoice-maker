@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="top-invoice">
+        <div class="name-address">
+        <input class="title-full-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
+        <input class="address-input" type="text" placeholder="e.g 64 Zoo Lane"></input>
+        <input class="postcode-input" type="text" placeholder="e.g E14 1LH"></input>
+    </div>
+    <div class="invoice-number">
+        <input class="number-input" type="text" placeholder="e.g 99">
+    </div> 
+    </div>
+
+    <table class="invoice-table">
+        <tr>
+            <th>Date:</th>
+            <th>Description:</th>
+            <th>Price:</th>
+        </tr>
+        <tr>
+            <td><input class="date-input" type="date"></td>
+            <td><input class="desc-input" type="text"></td>
+            <td><input class="price-input" type="text"></td>
+        </tr>
+    </table>
+    <div class="please-pay">
+        <p class="please-pay-amount">Please pay _____ into the follwing bank account:</p>
+        <div class="bank-details">
+            <input class="account-holder-name" type="text">
+            <input class="bank-name" type="text">
+            <input class="account-number" type="text">
+            <input class="sort-code" type="text">
+        </div>
+        <p class="many-thanks">Many thanks, _____</p>
+    </div>
+</body>
+ <script src="main.js"></script>
+</html>
