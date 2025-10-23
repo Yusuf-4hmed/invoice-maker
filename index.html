@@ -6,18 +6,24 @@
     <title>Invoice Maker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="capture-area">
+    <div class="invoice-number">
+        Invoice #:<input class="number-input" type="text" placeholder="e.g 99">
+    </div> 
     <div class="top-invoice">
         <div class="name-address">
-        <input id="title-full-name-input" class="title-full-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
-        <input class="address-input" type="text" placeholder="e.g 64 Zoo Lane"></input>
-        <input class="postcode-input" type="text" placeholder="e.g E14 1LH"></input>
+            <input id="title-full-name-input" class="title-full-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
+            <input id="address-input" class="address-input" type="text" placeholder="e.g 64 Zoo Lane"></input>
+            <input id="postcode-input" class="postcode-input" type="text" placeholder="e.g E14 1LH"></input>
+        </div>
+        <div class="bill-to">
+            <p>BILL TO:</p>
+            <input id="company-name-input" class="company-name-input" type="text" placeholder="e.g Mr Peter Parker"></input>
+            <input class="address-input" type="text" placeholder="e.g 64 Zoo Lane"></input>
+            <input class="postcode-input" type="text" placeholder="e.g E14 1LH"></input>
+        </div>
     </div>
-    <div class="invoice-number">
-        <input class="number-input" type="text" placeholder="e.g 99">
-    </div> 
-    </div>
-
+    
     <table class="invoice-table" id="invoice-table">
         <tr>
             <th>Date:</th>
@@ -25,22 +31,29 @@
             <th>Price:</th>
         </tr>
         <tr>
-            <td><input class="date-input" type="date"></td>
+            <td><input class="date-input" type="date" lang="en-GB"></td>
             <td><input class="desc-input" type="text"></td>
             <td><input class="price-input" type="number"></td>
         </tr>
     </table>
-    <button onclick="addNewTableRow()">New Table Row</button>
+    <button onclick="addNewTableRow()" data-html2canvas-ignore="true">New Table Row</button>
     <div class="please-pay">
         <p id="please-pay-amount" class="please-pay-amount">Please pay _____ into the following bank account:</p>
         <div class="bank-details">
-            <input class="account-holder-name" type="text">
-            <input class="bank-name" type="text">
-            <input class="account-number" type="text">
-            <input class="sort-code" type="text">
+            Bank Name:<input class="bank-name-input" id="bank-name-input" type="text">
+            Account Holder Name:<input class="account-holder-name-input" id="account-holder-name-input" type="text">
+            Account:<input class="account-number-input" id="account-number-input" type="text">
+            Sort Code:
+            <input class="sort-code-input" id="sort-code-input" type="text">
         </div>
         <p class="many-thanks" id="many-thanks">Many thanks, _____</p>
+        <button id="save-pdf" data-html2canvas-ignore="true">Save as PDF</button>
+
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
 </body>
  <script src="main.js"></script>
 </html>

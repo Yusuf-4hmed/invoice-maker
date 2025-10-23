@@ -1,5 +1,4 @@
 .top-invoice {
-    display: flex;
     gap: auto;
 }
 
@@ -14,16 +13,34 @@
     width: 200px;
 }
 
-.invoice-number {
-
+.bill-to {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
 }
+
+.bill-to input {
+ width: 200px;
+}
+
+.bill-to p {
+    margin: 20px 0px 0px;
+}
+
+.invoice-number {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0px 20px 0px;
+}
+
 
 .number-input {
     width: 60px;
 }
 
 .invoice-table {
-    margin: 10px 0px;
+    margin: 50px 0px 7px;
     border: 1px solid black;
     width: auto;
 }
@@ -37,4 +54,6 @@ th {
     flex-direction: column;
     width: 300px;
 }
+
+
 
